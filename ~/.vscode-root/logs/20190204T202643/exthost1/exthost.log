@@ -1,0 +1,36 @@
+[2019-02-04 20:26:47.415] [exthost] [info] extension host started
+[2019-02-04 20:26:47.462] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"activationEvent":"*"}
+[2019-02-04 20:26:47.462] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/debug-auto-launch/dist/extension
+[2019-02-04 20:26:47.475] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"activationEvent":"*"}
+[2019-02-04 20:26:47.475] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/emmet/dist/extension
+[2019-02-04 20:26:47.535] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"activationEvent":"*"}
+[2019-02-04 20:26:47.535] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/git/dist/main
+[2019-02-04 20:26:47.836] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"activationEvent":"*"}
+[2019-02-04 20:26:47.836] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/merge-conflict/dist/extension
+[2019-02-04 20:26:47.857] [exthost] [info] ExtensionService#_doActivateExtension robertohuertasm.vscode-icons {"startup":true,"activationEvent":"*"}
+[2019-02-04 20:26:47.857] [exthost] [info] ExtensionService#loadCommonJSModule /home/jean_rolllins/.vscode/extensions/robertohuertasm.vscode-icons-8.1.0/out/src/
+[2019-02-04 20:26:48.047] [exthost] [info] ExtensionService#_doActivateExtension vscode.php-language-features {"startup":false,"activationEvent":"onLanguage:php"}
+[2019-02-04 20:26:48.047] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/php-language-features/dist/phpMain
+[2019-02-04 20:26:48.088] [exthost] [info] ExtensionService#_doActivateExtension ecmel.vscode-html-css {"startup":false,"activationEvent":"onLanguage:php"}
+[2019-02-04 20:26:48.088] [exthost] [info] ExtensionService#loadCommonJSModule /home/jean_rolllins/.vscode/extensions/ecmel.vscode-html-css-0.2.0/out/src/extension
+[2019-02-04 20:26:48.619] [exthost] [info] ExtensionService#_doActivateExtension felixfbecker.php-intellisense {"startup":false,"activationEvent":"onLanguage:php"}
+[2019-02-04 20:26:48.620] [exthost] [info] ExtensionService#loadCommonJSModule /home/jean_rolllins/.vscode/extensions/felixfbecker.php-intellisense-2.3.10/out/extension
+[2019-02-04 20:26:49.478] [exthost] [info] eager extensions activated
+[2019-02-04 21:13:20.305] [exthost] [info] extension host started
+[2019-02-04 21:13:20.343] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"activationEvent":"*"}
+[2019-02-04 21:13:20.343] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/debug-auto-launch/dist/extension
+[2019-02-04 21:13:20.354] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"activationEvent":"*"}
+[2019-02-04 21:13:20.354] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/emmet/dist/extension
+[2019-02-04 21:13:20.391] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"activationEvent":"*"}
+[2019-02-04 21:13:20.391] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/git/dist/main
+[2019-02-04 21:13:20.583] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"activationEvent":"*"}
+[2019-02-04 21:13:20.583] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/merge-conflict/dist/extension
+[2019-02-04 21:13:20.595] [exthost] [info] ExtensionService#_doActivateExtension robertohuertasm.vscode-icons {"startup":true,"activationEvent":"*"}
+[2019-02-04 21:13:20.595] [exthost] [info] ExtensionService#loadCommonJSModule /home/jean_rolllins/.vscode/extensions/robertohuertasm.vscode-icons-8.1.0/out/src/
+[2019-02-04 21:13:20.744] [exthost] [info] ExtensionService#_doActivateExtension vscode.php-language-features {"startup":false,"activationEvent":"onLanguage:php"}
+[2019-02-04 21:13:20.744] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/php-language-features/dist/phpMain
+[2019-02-04 21:13:20.769] [exthost] [info] ExtensionService#_doActivateExtension ecmel.vscode-html-css {"startup":false,"activationEvent":"onLanguage:php"}
+[2019-02-04 21:13:20.769] [exthost] [info] ExtensionService#loadCommonJSModule /home/jean_rolllins/.vscode/extensions/ecmel.vscode-html-css-0.2.0/out/src/extension
+[2019-02-04 21:13:21.195] [exthost] [info] ExtensionService#_doActivateExtension felixfbecker.php-intellisense {"startup":false,"activationEvent":"onLanguage:php"}
+[2019-02-04 21:13:21.195] [exthost] [info] ExtensionService#loadCommonJSModule /home/jean_rolllins/.vscode/extensions/felixfbecker.php-intellisense-2.3.10/out/extension
+[2019-02-04 21:13:22.021] [exthost] [info] eager extensions activated

@@ -1,0 +1,28 @@
+DEBUG     Checking PHPLS_ALLOW_XDEBUG
+DEBUG     The xdebug extension is not loaded
+
+[Info  - 12:35:36 PM] 10 files total
+[Info  - 12:35:36 PM] Indexing project for definitions and static references
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/public/index.php
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/app/initiator.php
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/app/views/includes/header.php
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/app/views/includes/footer.php
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/app/views/pages/start.php
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/app/config/config.php
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/app/library/Controller.php
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/app/library/Core.php
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/app/library/DataBase.php
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/app/controllers/Pages.php
+[Info  - 12:35:37 PM] Indexing project for dynamic references
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/public/index.php
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/app/initiator.php
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/app/views/includes/header.php
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/app/views/includes/footer.php
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/app/views/pages/start.php
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/app/config/config.php
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/app/library/Controller.php
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/app/library/Core.php
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/app/library/DataBase.php
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/app/controllers/Pages.php
+[Info  - 12:35:37 PM] 0 Packages
+[Info  - 12:35:37 PM] All 10 PHP files parsed in 0 seconds. 146 MiB allocated.

@@ -1,0 +1,32 @@
+{
+    "telemetry.machineId": "61c390c89e66271c8fc4f662759b43db62999ce16c2292c5ba21ca7777295445",
+    "theme": "vs-dark",
+    "themeBackground": "#1e1e1e",
+    "pickerWorkingDir": "/opt/lampp/htdocs",
+    "openedPathsList": {
+        "workspaces2": [
+            "file:///opt/lampp/htdocs/micro_framework_mvc"
+        ],
+        "files2": []
+    },
+    "windowsState": {
+        "openedWindows": [],
+        "lastActiveWindow": {
+            "folderUri": {
+                "$mid": 1,
+                "fsPath": "/opt/lampp/htdocs/micro_framework_mvc",
+                "external": "file:///opt/lampp/htdocs/micro_framework_mvc",
+                "path": "/opt/lampp/htdocs/micro_framework_mvc",
+                "scheme": "file"
+            },
+            "backupPath": "/opt/lampp/htdocs/micro_framework_mvc/~/.vscode-root/Backups/8c5bbb2b11814e08aee1265f244ea291",
+            "uiState": {
+                "mode": 0,
+                "x": 0,
+                "y": 0,
+                "width": 1366,
+                "height": 731
+            }
+        }
+    }
+}

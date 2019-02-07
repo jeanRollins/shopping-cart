@@ -1,0 +1,30 @@
+DEBUG     Checking PHPLS_ALLOW_XDEBUG
+DEBUG     The xdebug extension is not loaded
+
+[Info  - 8:26:50 PM] 12 files total
+[Info  - 8:26:50 PM] Indexing project for definitions and static references
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/public/index.php
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/app/initiator.php
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/app/helpers/url-helper.php
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/app/views/includes/header.php
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/app/views/includes/footer.php
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/app/config/config.php
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/app/library/Controller.php
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/app/library/Core.php
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/app/library/DataBase.php
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/app/controllers/Pages.php
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/app/models/Item.php
+[Info  - 8:26:50 PM] Indexing project for dynamic references
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/public/index.php
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/app/initiator.php
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/app/helpers/url-helper.php
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/app/views/includes/header.php
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/app/views/includes/footer.php
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/app/config/config.php
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/app/library/Controller.php
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/app/library/Core.php
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/app/library/DataBase.php
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/app/controllers/Pages.php
+Parsing file:///opt/lampp/htdocs/micro_framework_mvc/app/models/Item.php
+[Info  - 8:26:50 PM] 0 Packages
+[Info  - 8:26:50 PM] All 12 PHP files parsed in 0 seconds. 146 MiB allocated.
