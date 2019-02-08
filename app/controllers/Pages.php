@@ -5,15 +5,12 @@ class Pages extends Controller
     public function __construct()
     {
         $this->itemModel = $this->model('Item');
-        $this->session = $this->model('Session');
+        $this->cart = $this->model('CartShopping');
     }
 
     public function index(){
 
         $items = $this->itemModel->getItems();
-        
-        $this->session->init();
-        
 
         $dates = [
             'items'  => $items
@@ -21,36 +18,27 @@ class Pages extends Controller
         $this->view('pages/start', $dates);
     }
 
-    
     public function add()
     {
-        $itemReceived['item'] = array();
-
-        if(is_null($itemReceived['item'])){
+        session_start();
+        $itemToAdd = (int) $_POST['id'];
+        
+        if(is_null($itemToAdd)){
             $error = [
                 'message' => 'The item can not be null.'
             ];        
         }
         
-        if(isset($itemReceived['item'])){
+        if(isset($itemToAdd)){
             $error = [
                 'message' => 'The item can not be empty.'
             ];        
         }
+        $this->cart->addToCart($itemToAdd);
+        //unset($_SESSION['item']);
         
-        if(!isset($_SESSION['item'])){
+        redirect('/');
 
-            array_push($itemReceived['item'], (int) $_POST['id']); 
-
-            $_SESSION['item'] = $itemReceived['item'];
-            
-            $this->view('pages/start', $_SESSION['item']);
-        }
-        else{
-            array_push($_SESSION['item'], (int) $itemReceived['item']);
-
-            $this->view('pages/start', $_SESSION['item']);
-        }
     }
    
 }

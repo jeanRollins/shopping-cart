@@ -7,6 +7,6 @@ define('DB_NAME','shopping-car');
 
 define('RUTE_APP',dirname(dirname(__FILE__)));
 
-define ('RUTE_URL', 'http://localhost/micro_framework_mvc');
+define ('RUTE_URL', 'http://localhost/shopping-cart');
 
 define ('NAME_SITE', 'CARRITO APP');

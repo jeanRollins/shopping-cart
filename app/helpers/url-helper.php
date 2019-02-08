@@ -2,5 +2,5 @@
 
 function redirect($page)
 {
-    header('localhost' . RUTE_URL . $page);
+    header('location: ' . RUTE_URL . $page);
 }

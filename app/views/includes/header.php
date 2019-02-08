@@ -19,7 +19,7 @@
   <div class="collapse navbar-collapse ml-4" id="navbarColor03">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#"> Agregar Producto <span class="sr-only">(current)</span></a>
+        <a class="nav-link border-right border-left" href="<?php echo RUTE_URL;?>/pages/item"> Agregar Producto <span class="sr-only">(current)</span></a>
       </li>
     </ul>
     

@@ -1,18 +1,21 @@
 <?php 
     require RUTE_APP .'/views/includes/header.php';
+
+    session_start();
+    
 ?>
 <div class="container mt-4">
     <div class="row">
         <div class="col">
             <div class="center-block">
                 <a href="">
-                    <i style="font-size: 30px;" class="fas fa-shopping-bag ml-5">Total productos:
+                    <i style="font-size: 30px;" class="fas fa-shopping-bag ml-5">&nbsp Total productos:
                         <?php 
                             if(empty($_SESSION['item'])){
+                                $_SESSION['item'] = array();
                                 echo 0;
                             }else{
                                 echo count($_SESSION['item']);
-                                //var_dump($_SESSION['item']);
                             }
                         ?>
                     </i>
