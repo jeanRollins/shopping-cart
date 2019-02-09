@@ -28,7 +28,7 @@
             <div class="col-3 my-3">
                 <div class="card">
                     <form action="<?php echo RUTE_URL;?>/pages/add/<?php echo $item->id; ?>" method="POST">
-                        <img height="250"  src="data:image/jpg;base64,<?php echo base64_encode($item->image);?>" alt="" class="card-img-top p-4">
+                        <img height="200"  src="data:image/jpg;base64,<?php echo base64_encode($item->image);?>" alt="" class="card-img-top p-4">
                         <div class="card-body">
                             <h5><?php echo "$".$item->price; ?></h5>
                             <p><?php echo $item->description; ?></p>

@@ -1,0 +1,11 @@
+.img-add-item{
+     filter: blur(1px);
+}
+
+.img-add-item:hover {
+  filter: none;
+}
+
+.nav-link:hover{
+     background-color: #f7f7f7;
+}

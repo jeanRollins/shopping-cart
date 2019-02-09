@@ -37,8 +37,13 @@ class Pages extends Controller
         $this->cart->addToCart($itemToAdd);
         //unset($_SESSION['item']);
         
-        redirect('/');
+        redirect('/pages');
 
+    }
+
+    public function additem()
+    {
+        $this->view('pages/additem');
     }
    
 }

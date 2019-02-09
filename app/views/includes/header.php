@@ -11,7 +11,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#"><?php echo NAME_SITE; ?></a>
+  <a class="navbar-brand" href="<?php echo RUTE_URL;?>"><?php echo NAME_SITE; ?></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -19,7 +19,7 @@
   <div class="collapse navbar-collapse ml-4" id="navbarColor03">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link border-right border-left" href="<?php echo RUTE_URL;?>/pages/item"> Agregar Producto <span class="sr-only">(current)</span></a>
+        <a class="nav-link border-right border-left " href="<?php echo RUTE_URL;?>/pages/additem"> Agregar Producto <span class="sr-only">(current)</span></a>
       </li>
     </ul>
     
