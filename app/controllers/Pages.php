@@ -6,14 +6,15 @@ class Pages extends Controller
     {
         $this->itemModel = $this->model('Item');
         $this->cart = $this->model('CartShopping');
+        $this->category = $this->model('Category');
     }
 
-    public function index(){
-
-        $items = $this->itemModel->getItems();
+    public function index()
+    {
+        $itemsFounded = $this->itemModel->getItems();
 
         $dates = [
-            'items'  => $items
+            'items'  => $itemsFounded
         ];
         $this->view('pages/start', $dates);
     }
@@ -41,9 +42,30 @@ class Pages extends Controller
 
     }
 
-    public function additem()
+    public function addItem()
     {
-        $this->view('pages/additem');
+        $categoriesFounded = $this->category->getCategories();
+
+        $dates =[
+            'items' => $categoriesFounded
+        ];
+        
+        $this->view('pages/additem', $dates);
     }
+
+    public function editItems()
+    {   
+        $itemsFounded = $this->itemModel->getItems();
+        $categoriesFounded = $this->category->getCategories();
+
+        $dates =[
+            'items'         => $itemsFounded,
+            'categories'    => $categoriesFounded
+        ];
+        
+        $this->view('pages/editItems', $dates);
+    }
+
+
    
 }
