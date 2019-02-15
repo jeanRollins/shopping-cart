@@ -8,6 +8,7 @@ class ControllerItem extends Controller
         $this->category = $this->model('Category');
     }
 
+
     public function edit()
     {
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
@@ -43,14 +44,11 @@ class ControllerItem extends Controller
             $categoriesFounded = $this->category->getCategories();
 
             $dates = [
-                'items'  => $itemsFounded
+                'items'       => $itemsFounded,
+                'categories'  => $categoriesFounded
             ];
 
-            $categories = [
-                'items'  => $categoriesFounded
-            ];
-
-            $this->view('pages/updateItem', $dates, $categories);
+            $this->view('pages/updateItem', $dates);
         }
     }
 
@@ -60,31 +58,49 @@ class ControllerItem extends Controller
 
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
-            $imageReceived = $_FILES['image']['tmp_name'];
-            $nameImageReceived = $_FILES['image']['name'];
+            if($_FILES['image']['name']) {
 
-            if(empty($imageReceived)){
-                $error[] = [
-                    'message' => 'The imageReceived can not be empty.',
-                    'code'    =>  1001
-                ];        
-            }
+                $imageReceived = $_FILES['image']['tmp_name'];
+                $nameImageReceived = $_FILES['image']['name'];
             
-            if(!isset($imageReceived)){
-                $error[] = [
-                    'message' => 'The imageReceived can not be empty.',
-                    'code'    =>  1000
-                ];        
+                $itemToAdd = [
+                    'id'          => (int) $_POST['id'] ,
+                    'price'       => filter_var($_POST['price'] , FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH),
+                    'idCategory'  => filter_var($_POST['category'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH),
+                    'description' => filter_var($_POST['description'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH),
+                    'image'       => saveImage($nameImageReceived, $imageReceived)            
+                ];
+
+                $ruteForDelete = RUTE_IMAGE . $_POST['imageSaved'];
+
+                if (!file_exists($ruteForDelete)) {
+                    $error[] = [
+                        'message' => 'The file not exists.',
+                        'code'    =>  1003
+                    ];  
+                }
+
+                if(!unlink($ruteForDelete)){
+                    $error[] = [
+                        'message' => 'The file not can delete.',
+                        'code'    =>  1004
+                    ];
+                }
+                
+                if(count($error)!=0){
+                    return json_encode($error);
+                }
+                
+            }else{
+                $itemToAdd = [
+                    'id'          => (int) $_POST['id'] ,
+                    'price'       => filter_var($_POST['price'] , FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH),
+                    'idCategory'  => filter_var($_POST['category'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH),
+                    'description' => filter_var($_POST['description'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH),
+                    'image'       => $_POST['imageSaved']            
+                ];
+
             }
-
-            $itemToAdd = [
-                'id'          => (int) $_POST['id'] ,
-                'price'       => filter_var($_POST['price'] , FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH),
-                'category'    => filter_var($_POST['category'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH),
-                'description' => filter_var($_POST['description'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH),
-                'image'       => saveImage($nameImageReceived, $imageReceived)            
-            ];
-
             
             if(!isset($itemToAdd['id'])){
                 $error[] = [
@@ -124,25 +140,25 @@ class ControllerItem extends Controller
                 ];
             }
 
-            if(empty($itemToAdd['category'])){
+            if(empty($itemToAdd['idCategory'])){
                 $error[] = [
-                    'message' => 'The itemToAdd[category] can not be empty.',
+                    'message' => 'The itemToAdd[idCategory] can not be empty.',
                     'code'    =>  1001
                 ];        
             }
             
-            if(!isset($itemToAdd['category'])){
+            if(!isset($itemToAdd['idCategory'])){
                 $error[] = [
-                    'message' => 'The itemToAdd[category] can not be empty.',
+                    'message' => 'The itemToAdd[idCategory] can not be empty.',
                     'code'    =>  1000
                 ];        
             }
 
-            $itemToAdd['category'] = trim($itemToAdd['category']);
+            $itemToAdd['idCategory'] = trim($itemToAdd['idCategory']);
 
-            if(strlen($itemToAdd['category']) < 3 || strlen($itemToAdd['category']) > 15){
+            if(strlen($itemToAdd['idCategory']) < 3 || strlen($itemToAdd['idCategory']) > 15){
                 $error[] = [
-                    'message' => 'The itemToAdd[category] must have a length greater than 4 and less than 15.',
+                    'message' => 'The itemToAdd[idCategory] must have a length greater than 4 and less than 15.',
                     'code'    =>  1002
                 ]; 
             }
@@ -202,7 +218,7 @@ class ControllerItem extends Controller
 
             $itemToAdd = [
                 'price'       => filter_var($_POST['price'] , FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH),
-                'category'    => filter_var($_POST['category'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH),
+                'idCategory'    => filter_var($_POST['category'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH),
                 'description' => filter_var($_POST['description'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH),
                 'image'       => saveImage($nameImageReceived, $imageReceived)            
             ];
@@ -231,25 +247,25 @@ class ControllerItem extends Controller
                 ];
             }
 
-            if(empty($itemToAdd['category'])){
+            if(empty($itemToAdd['idCategory'])){
                 $error[] = [
-                    'message' => 'The itemToAdd[category] can not be empty.',
+                    'message' => 'The itemToAdd[idCategory] can not be empty.',
                     'code'    =>  1001
                 ];        
             }
             
-            if(!isset($itemToAdd['category'])){
+            if(!isset($itemToAdd['idCategory'])){
                 $error[] = [
-                    'message' => 'The itemToAdd[category] can not be empty.',
+                    'message' => 'The itemToAdd[idCategory] can not be empty.',
                     'code'    =>  1000
                 ];        
             }
 
-            $itemToAdd['category'] = trim($itemToAdd['category']);
+            $itemToAdd['idCategory'] = trim($itemToAdd['idCategory']);
 
-            if(strlen($itemToAdd['category']) < 3 || strlen($itemToAdd['category']) > 15){
+            if(strlen($itemToAdd['idCategory']) < 3 || strlen($itemToAdd['idCategory']) > 15){
                 $error[] = [
-                    'message' => 'The itemToAdd[category] must have a length greater than 4 and less than 15.',
+                    'message' => 'The itemToAdd[idCategory] must have a length greater than 4 and less than 15.',
                     'code'    =>  1002
                 ]; 
             }

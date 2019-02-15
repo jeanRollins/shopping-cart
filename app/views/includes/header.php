@@ -22,7 +22,7 @@
         <a class="nav-link border-right border-left" href="<?php echo RUTE_URL;?>/pages/addItem"> Agregar Producto <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link border-right border-left " href="<?php echo RUTE_URL;?>/pages/editItems"> Editar Productos <span class="sr-only">(current)</span></a>
+        <a class="nav-link border-right border-left " href="<?php echo RUTE_URL;?>/pages/editItems/1"> Editar Productos <span class="sr-only">(current)</span></a>
       </li>
     </ul>
     

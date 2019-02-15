@@ -8,13 +8,19 @@
                 <div class="card-body">
                     <form action="<?php echo RUTE_URL;?>/controllerItem/update" method="POST" enctype="multipart/form-data">
                         <fieldset>
-                        <?php var_dump($categories);?>
                             <div class="form-group">
                                 <label for="category">Seleccionar Categoria</label>
                                 <select class="form-control" id="category" name="category">
-                                    <option value="basquetbol">Basquetbol</option>
-                                    <option value="futbol">Futbol</option>
-                                    <option value="outdoor">Outdoor</option>
+                                    <?php foreach ($dates['categories'] as $item) : ?>
+                                        <option value="<?php echo $item->id_category;?>"
+                                            <?php 
+                                                if($item->id_category == $dates['items']->id_category){
+                                                    echo "selected";    
+                                                }
+                                            ?>
+                                        >
+                                        <?php echo $item->name_category;?></option>
+                                    <?php endforeach;?>  
                                 </select>
                             </div>
                             <div class="form-group">
@@ -32,16 +38,17 @@
                                     <textarea class="form-control" id="description" name="description" rows="3" required><?php echo $dates['items']->description;?></textarea>
                                 </div>
                             </div>
+                            <input type="text" style="display:none;" value="<?php echo $dates['items']->image;?>" name="imageSaved">
                             <div class="form-group">
                                 <?php if(empty($dates['items']->image)){
-                                        echo "No tienes cargada ninguna imagen del producto, agrega una imagen.";                                    
+                                        echo "<p class='text-danger'>No tienes cargada ninguna imagen del producto, agrega una imagen.</p>";                                    
                                     }
                                     else{
-                                        echo "Ya tienes cargada una imagen, sí deseas actualizarla selecciona otra imagen.";
+                                        echo "<p class='text-success'>Ya tienes cargada una imagen.</p>";
                                     }
                                 ?>
-                                <label for="image">Actualizar Imagen</label>
-                                <input type="file" name="image" value="<?php echo RUTE_URL .'/public/img/' . $dates['items']->image;?>" class="form-control-file" id="image" aria-describedby="fileHelp">
+                                <label for="image" >Actualizar Imagen</label>
+                                <input type="file" name="image" class="form-control-file" accept="image/png, image/jpeg">
                                 <small id="fileHelp" class="form-text text-muted">Debe agregar una imagen deportiva.</small>
                             </div>
                             <button type="submit" class="btn btn-primary btn-block" name="id" value="<?php echo $dates['items']->id;?>">Actualizar Item</button>

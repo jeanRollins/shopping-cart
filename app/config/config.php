@@ -9,6 +9,7 @@ define('RUTE_APP',dirname(dirname(__FILE__)));
 
 define ('RUTE_URL', 'http://localhost/shopping-cart');
 
+
 define ('RUTE_IMAGE','C:/xampp/htdocs/shopping-cart/public/img/');
 
 define ('NAME_SITE', 'CARRITO APP');

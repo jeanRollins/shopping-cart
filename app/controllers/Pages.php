@@ -11,7 +11,7 @@ class Pages extends Controller
 
     public function index()
     {
-        $itemsFounded = $this->itemModel->getItems();
+        $itemsFounded = $this->itemModel-> getItemsEdit();
 
         $dates = [
             'items'  => $itemsFounded
@@ -53,19 +53,37 @@ class Pages extends Controller
         $this->view('pages/additem', $dates);
     }
 
-    public function editItems()
+    public function editItems($pageCurrent)
     {   
-        $itemsFounded = $this->itemModel->getItems();
-        $categoriesFounded = $this->category->getCategories();
+        $pageCurrent = (int) $pageCurrent;
+        $rute = '/pages/editItems/1';
+
+        if($pageCurrent < 1){
+            redirect($rute);
+        }
+        
+        $articulesForPage = 4;
+
+        $largeItemsFounded =  $this->itemModel->getLargeItem();
+        
+        $pages = $largeItemsFounded/3;
+        $pages = ceil($pages);
+        
+        if($pageCurrent > $pages){
+            redirect($rute);
+        }
+        
+        $indexInit = ($pageCurrent-1) * $articulesForPage;
+        
+        $itemsFounded = $this->itemModel->getItemsPagination($indexInit, $articulesForPage);       
 
         $dates =[
-            'items'         => $itemsFounded,
-            'categories'    => $categoriesFounded
+            'items'        =>   $itemsFounded,
+            'pages'        =>   $pages,
+            'pageCurrent'  =>   (int) $pageCurrent
         ];
         
         $this->view('pages/editItems', $dates);
     }
-
-
    
 }

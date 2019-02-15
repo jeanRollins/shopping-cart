@@ -32,7 +32,7 @@
                         <div class="card-body">
                             <h5><?php echo "$".$item->price; ?></h5>
                             <p><?php echo $item->description; ?></p>
-                            <p><span class="badge badge-primary badge-block">Category : <?php echo $item->category;?></span></p>
+                            <p><span class="badge badge-primary badge-block">Category : <?php echo $item->name_category;?></span></p>
                             <button type="submit" class="btn btn-outline-primary btn-block" name="id" value="<?php echo $item->id; ?>" >Agregar Producto</button>
                         </div>  
                     </form>
