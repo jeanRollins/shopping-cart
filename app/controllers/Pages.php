@@ -17,6 +17,7 @@ class Pages extends Controller
             'items'  => $itemsFounded
         ];
         $this->view('pages/start', $dates);
+        
     }
 
     public function add()
